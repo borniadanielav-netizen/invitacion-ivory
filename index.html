@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis 15 años | Sofía</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f5f0e8;
+      color: #4b4038;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .portada {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #eee5d8;
+      padding: 40px 20px;
+    }
+
+    .pequeno {
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 64px;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .fecha {
+      font-size: 18px;
+      letter-spacing: 3px;
+      margin: 20px 0 35px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1px solid #75675b;
+      color: #4b4038;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .boton:hover {
+      background: #4b4038;
+      color: white;
+    }
+
+    .frase {
+      font-size: 21px;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    .contador {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .tiempo {
+      min-width: 75px;
+      padding: 15px 10px;
+      border: 1px solid #c9bdae;
+    }
+
+    .numero {
+      display: block;
+      font-size: 28px;
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ubicacion,
+    .regalos,
+    .rsvp {
+      background: #faf7f2;
+    }
+
+    .botones {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .dato {
+      margin: 15px auto;
+      padding: 15px;
+      max-width: 400px;
+      background: #eee5d8;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #ddd2c4;
+    }
+
+    footer {
+      padding: 50px 20px;
+      background: #4b4038;
+      color: white;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      .galeria img {
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <section class="portada">
+
+    <p class="pequeno">Una noche muy especial</p>
+
+    <h1>Sofía</h1>
+
+    <p class="pequeno">Mis 15 años</p>
+
+    <p class="fecha">12 · 12 · 2026</p>
+
+    <a href="#invitacion" class="boton">
+      ABRIR INVITACIÓN
+    </a>
+
+  </section>
+
+
+  <!-- BIENVENIDA -->
+  <section id="invitacion">
+
+    <p class="frase">
+      "Hay momentos que merecen ser celebrados
+      y recuerdos que duran para siempre."
+    </p>
+
+    <p>
+      Quiero compartir con vos una noche muy especial
+      y me encantaría que seas parte de este momento.
+    </p>
+
+  </section>
+
+
+  <!-- CUENTA REGRESIVA -->
+  <section>
+
+    <h2>Falta cada vez menos</h2>
+
+    <div class="contador">
+
+      <div class="tiempo">
+        <span class="numero" id="dias">00</span>
+        <span class="label">Días</span>
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="horas">00</span>
+        <span class="label">Horas</span>
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="minutos">00</span>
+        <span class="label">Minutos</span>
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="segundos">00</span>
+        <span class="label">Segundos</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- UBICACIÓN -->
+  <section class="ubicacion">
+
+    <h2>¿Dónde nos encontramos?</h2>
+
+    <p>
+      Sábado 12 de diciembre<br>
+      21:00 hs
+    </p>
+
+    <p style="margin-top:15px;">
+      Salón de eventos Ivory<br>
+      Buenos Aires, Argentina
+    </p>
+
+    <div class="botones">
+
+      <a
+        href="https://www.google.com/maps"
+        target="_blank"
+        class="boton">
+        GOOGLE MAPS
+      </a>
+
+      <a
+        href="https://waze.com/ul"
+        target="_blank"
+        class="boton">
+        WAZE
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- RSVP -->
+  <section class="rsvp">
+
+    <h2>Confirmá tu asistencia</h2>
+
+    <p>
+      Tu confirmación nos ayuda muchísimo
+      a organizar esta noche especial.
+    </p>
+
+    <div class="botones">
+
+      <a
+        href="https://forms.google.com"
+        target="_blank"
+        class="boton">
+        CONFIRMAR ASISTENCIA
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- REGALOS -->
+  <section class="regalos">
+
+    <h2>Un detalle para Sofía</h2>
+
+    <p>
+      Tu presencia es mi mejor regalo.
+      Pero si querés tener un detalle conmigo,
+      podés hacerlo mediante transferencia.
+    </p>
+
+    <div class="dato">
+      <strong>Alias</strong><br>
+      SOFIA.15
+    </div>
+
+    <button
+      class="boton"
+      onclick="copiarAlias()">
+      COPIAR ALIAS
+    </button>
+
+  </section>
+
+
+  <!-- GALERÍA -->
+  <section>
+
+    <h2>Momentos</h2>
+
+    <p>
+      Algunas fotos para compartir
+      la previa de esta celebración.
+    </p>
+
+    <div class="galeria">
+
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Foto">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600" alt="Foto">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600" alt="Foto">
+      <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600" alt="Foto">
+
+    </div>
+
+  </section>
+
+
+  <!-- CIERRE -->
+  <footer>
+
+    <p>Gracias por ser parte de este momento.</p>
+
+    <p>
+      Organizar una fiesta tiene que ser
+      un disfrute, no un caos. 🤍
+    </p>
+
+    <p style="margin-top:20px;">
+      IVORY DISEÑOS DIGITALES
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    // FECHA DEL EVENTO
+    const fechaEvento = new Date("December 12, 2026 21:00:00").getTime();
+
+    function actualizarContador() {
+
+      const ahora = new Date().getTime();
+
+      const diferencia = fechaEvento - ahora;
+
+      if (diferencia <= 0) {
+        document.getElementById("dias").innerText = "00";
+        document.getElementById("horas").innerText = "00";
+        document.getElementById("minutos").innerText = "00";
+        document.getElementById("segundos").innerText = "00";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+      const horas = Math.floor(
+        (diferencia / (1000 * 60 * 60)) % 24
+      );
+
+      const minutos = Math.floor(
+        (diferencia / (1000 * 60)) % 60
+      );
+
+      const segundos = Math.floor(
+        (diferencia / 1000) % 60
+      );
+
+      document.getElementById("dias").innerText = dias;
+      document.getElementById("horas").innerText = horas;
+      document.getElementById("minutos").innerText = minutos;
+      document.getElementById("segundos").innerText = segundos;
+    }
+
+    actualizarContador();
+
+    setInterval(actualizarContador, 1000);
+
+
+    // COPIAR ALIAS
+    function copiarAlias() {
+
+      const alias = "SOFIA.15";
+
+      navigator.clipboard.writeText(alias);
+
+      alert("¡Alias copiado! 🤍");
+    }
+
+  </script>
+
+</body>
+</html>
