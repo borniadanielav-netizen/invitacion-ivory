@@ -11,6 +11,10 @@
 
 <style>
 
+/* =========================
+   GENERAL
+========================= */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -137,7 +141,7 @@ p{
 }
 
 /* =========================
-   COUNTDOWN
+   CUENTA REGRESIVA
 ========================= */
 
 .countdown-section{
@@ -210,7 +214,7 @@ p{
 }
 
 /* =========================
-   RSVP
+   CONFIRMACIÓN
 ========================= */
 
 .rsvp{
@@ -230,11 +234,32 @@ p{
 }
 
 /* =========================
+   DRESS CODE
+========================= */
+
+.dresscode{
+    text-align:center;
+    background:#f5f0e8;
+}
+
+.dresscode-main{
+    font-size:24px;
+    font-style:italic;
+    margin-bottom:10px;
+}
+
+.dresscode p:last-child{
+    max-width:480px;
+    margin:0 auto;
+}
+
+/* =========================
    REGALO
 ========================= */
 
 .gift{
     text-align:center;
+    background:#eee6dc;
 }
 
 .gift-box{
@@ -271,39 +296,31 @@ p{
 }
 
 /* =========================
-       GALERÍA
-       ========================= */
+   GALERÍA
+========================= */
 
-    .gallery {
-      display: grid;
+.gallery{
+    background:#f5f0e8;
+}
 
-      grid-template-columns: repeat(2, 1fr);
+.photos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 
-      gap: 10px;
+    max-width:500px;
+    margin:0 auto;
+}
 
-      max-width: 650px;
+.photos img{
+    width:100%;
+    height:250px;
 
-      margin: 35px auto 0;
-    }
+    object-fit:cover;
+    object-position:center;
 
-    .gallery img {
-      width: 100%;
-
-      height: 280px;
-
-      object-fit: cover;
-
-      display: block;
-
-      filter: saturate(.80);
-
-      transition: transform .4s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.02);
-    }
-
+    display:block;
+}
 
 /* =========================
    WHATSAPP
@@ -337,13 +354,9 @@ footer{
 }
 
 .footer-brand{
-    font-size:19px;
-    margin-bottom:8px;
-}
-
-.footer-instagram{
-    font-size:13px;
-    margin-bottom:15px;
+    font-size:17px;
+    margin-bottom:10px;
+    letter-spacing:.5px;
 }
 
 .footer-phrase{
@@ -353,11 +366,12 @@ footer{
 }
 
 /* =========================
-   MÚSICA
+   BOTÓN MÚSICA
 ========================= */
 
 .music-btn{
     position:fixed;
+
     right:18px;
     bottom:18px;
 
@@ -365,12 +379,14 @@ footer{
     height:45px;
 
     border-radius:50%;
+
     border:1px solid #806f61;
 
     background:#f5f0e8;
     color:#4b4037;
 
     font-size:18px;
+
     cursor:pointer;
 
     z-index:999;
@@ -407,10 +423,7 @@ footer{
         font-size:25px;
     }
 
-    /*
-       GALERÍA:
-       vuelve al tamaño compacto de la primera versión
-    */
+    /* Galería compacta como la versión anterior */
 
     .photos{
         max-width:360px;
@@ -418,14 +431,20 @@ footer{
     }
 
     .photos img{
-        aspect-ratio:1 / 1;
+        height:180px;
     }
 
 }
 
+
+/* =========================
+   FIN CSS
+========================= */
+
 </style>
 
 </head>
+
 
 <body>
 
@@ -454,10 +473,13 @@ footer{
             12 · 12 · 2026
         </div>
 
-        <a href="#bienvenida"
-           class="open-btn"
-           onclick="startMusic()">
+        <a
+        href="#bienvenida"
+        class="open-btn"
+        onclick="startMusic()">
+
             Abrir invitación
+
         </a>
 
     </div>
@@ -469,11 +491,15 @@ footer{
      BIENVENIDA
 ========================= -->
 
-<section class="welcome" id="bienvenida">
+<section
+class="welcome"
+id="bienvenida">
 
     <div class="container">
 
-        <h2>Te invito a celebrar conmigo</h2>
+        <h2>
+            Te invito a celebrar conmigo
+        </h2>
 
         <div class="decor-line"></div>
 
@@ -489,35 +515,76 @@ footer{
 
 
 <!-- =========================
-     COUNTDOWN
+     CUENTA REGRESIVA
 ========================= -->
 
 <section class="countdown-section">
 
     <div class="container">
 
-        <h2>Falta muy poco</h2>
+        <h2>
+            Falta muy poco
+        </h2>
 
         <div class="countdown">
 
             <div class="time-box">
-                <div class="time-number" id="days">00</div>
-                <div class="time-label">Días</div>
+
+                <div
+                class="time-number"
+                id="days">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Días
+                </div>
+
             </div>
 
-            <div class="time-box">
-                <div class="time-number" id="hours">00</div>
-                <div class="time-label">Horas</div>
-            </div>
 
             <div class="time-box">
-                <div class="time-number" id="minutes">00</div>
-                <div class="time-label">Minutos</div>
+
+                <div
+                class="time-number"
+                id="hours">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Horas
+                </div>
+
             </div>
 
+
             <div class="time-box">
-                <div class="time-number" id="seconds">00</div>
-                <div class="time-label">Segundos</div>
+
+                <div
+                class="time-number"
+                id="minutes">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Minutos
+                </div>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <div
+                class="time-number"
+                id="seconds">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Segundos
+                </div>
+
             </div>
 
         </div>
@@ -535,7 +602,9 @@ footer{
 
     <div class="container">
 
-        <h2>El gran día</h2>
+        <h2>
+            El gran día
+        </h2>
 
         <div class="event-card">
 
@@ -553,14 +622,19 @@ footer{
                 href="https://www.google.com/maps"
                 target="_blank"
                 class="location-btn">
+
                     Google Maps
+
                 </a>
+
 
                 <a
                 href="https://www.waze.com/"
                 target="_blank"
                 class="location-btn">
+
                     Waze
+
                 </a>
 
             </div>
@@ -580,7 +654,9 @@ footer{
 
     <div class="container">
 
-        <h2>¿Nos acompañás?</h2>
+        <h2>
+            ¿Nos acompañás?
+        </h2>
 
         <p>
             Confirmá tu asistencia para que podamos
@@ -591,8 +667,38 @@ footer{
         href="https://forms.google.com/"
         target="_blank"
         class="rsvp-btn">
+
             Confirmar asistencia
+
         </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DRESS CODE
+========================= -->
+
+<section class="dresscode">
+
+    <div class="container">
+
+        <h2>
+            Dress code
+        </h2>
+
+        <div class="decor-line"></div>
+
+        <p class="dresscode-main">
+            Elegante
+        </p>
+
+        <p>
+            Te invitamos a elegir un look especial
+            para compartir esta noche tan importante.
+        </p>
 
     </div>
 
@@ -607,7 +713,9 @@ footer{
 
     <div class="container">
 
-        <h2>Un detalle especial</h2>
+        <h2>
+            Un detalle especial
+        </h2>
 
         <p>
             Si deseás hacerme un regalo,
@@ -618,6 +726,7 @@ footer{
 
         <div class="gift-box">
 
+
             <div class="data">
 
                 <div class="data-label">
@@ -627,13 +736,17 @@ footer{
                 <div
                 class="data-value"
                 id="alias">
+
                     SOFIA.15.AÑOS
+
                 </div>
 
                 <button
                 class="copy-btn"
                 onclick="copyText('alias')">
+
                     Copiar alias
+
                 </button>
 
             </div>
@@ -648,16 +761,21 @@ footer{
                 <div
                 class="data-value"
                 id="cbu">
+
                     0000000000000000000000
+
                 </div>
 
                 <button
                 class="copy-btn"
                 onclick="copyText('cbu')">
+
                     Copiar CBU
+
                 </button>
 
             </div>
+
 
         </div>
 
@@ -674,27 +792,35 @@ footer{
 
     <div class="container">
 
-        <h2>Momentos</h2>
+        <h2>
+            Momentos
+        </h2>
 
         <div class="decor-line"></div>
 
+
         <div class="photos">
+
 
             <img
             src="https://images.pexels.com/photos/33404522/pexels-photo-33404522.jpeg"
             alt="Quinceañera">
 
+
             <img
             src="https://images.pexels.com/photos/33404523/pexels-photo-33404523.jpeg"
             alt="Quinceañera">
+
 
             <img
             src="https://images.pexels.com/photos/33404525/pexels-photo-33404525.jpeg"
             alt="Quinceañera">
 
+
             <img
             src="https://images.pexels.com/photos/33404518/pexels-photo-33404518.jpeg"
             alt="Quinceañera">
+
 
         </div>
 
@@ -711,7 +837,9 @@ footer{
 
     <div class="container">
 
-        <h2>¿Tenés alguna consulta?</h2>
+        <h2>
+            ¿Tenés alguna consulta?
+        </h2>
 
         <p>
             Podés comunicarte por WhatsApp.
@@ -721,7 +849,9 @@ footer{
         href="https://wa.me/5491100000000"
         target="_blank"
         class="whatsapp-btn">
+
             Escribir por WhatsApp
+
         </a>
 
     </div>
@@ -730,17 +860,13 @@ footer{
 
 
 <!-- =========================
-     FOOTER
+     PIE FINAL IVORY
 ========================= -->
 
 <footer>
 
     <div class="footer-brand">
-        Ivory Diseños Digitales
-    </div>
-
-    <div class="footer-instagram">
-        @ivory.dd
+        Ivory Diseños Digitales · @ivory.dd
     </div>
 
     <div class="footer-phrase">
@@ -754,7 +880,9 @@ footer{
      MÚSICA
 ========================= -->
 
-<audio id="music" loop>
+<audio
+id="music"
+loop>
 
     <source
     src="musica.mp3.mp3"
@@ -783,6 +911,7 @@ aria-label="Activar música">
 const eventDate =
 new Date("December 12, 2026 21:00:00").getTime();
 
+
 function updateCountdown(){
 
     const now =
@@ -791,21 +920,27 @@ function updateCountdown(){
     const distance =
     eventDate - now;
 
+
     if(distance <= 0){
 
-        document.getElementById("days").innerText="00";
-        document.getElementById("hours").innerText="00";
-        document.getElementById("minutes").innerText="00";
-        document.getElementById("seconds").innerText="00";
+        document.getElementById("days").innerText = "00";
+
+        document.getElementById("hours").innerText = "00";
+
+        document.getElementById("minutes").innerText = "00";
+
+        document.getElementById("seconds").innerText = "00";
 
         return;
     }
+
 
     const days =
     Math.floor(
         distance /
         (1000 * 60 * 60 * 24)
     );
+
 
     const hours =
     Math.floor(
@@ -814,12 +949,14 @@ function updateCountdown(){
         (1000 * 60 * 60)
     );
 
+
     const minutes =
     Math.floor(
         (distance %
         (1000 * 60 * 60)) /
         (1000 * 60)
     );
+
 
     const seconds =
     Math.floor(
@@ -828,18 +965,24 @@ function updateCountdown(){
         1000
     );
 
+
     document.getElementById("days").innerText =
     String(days).padStart(2,"0");
+
 
     document.getElementById("hours").innerText =
     String(hours).padStart(2,"0");
 
+
     document.getElementById("minutes").innerText =
     String(minutes).padStart(2,"0");
 
+
     document.getElementById("seconds").innerText =
     String(seconds).padStart(2,"0");
+
 }
+
 
 updateCountdown();
 
@@ -858,6 +1001,7 @@ function copyText(id){
     navigator.clipboard.writeText(text);
 
     alert("Copiado correctamente");
+
 }
 
 
@@ -877,13 +1021,13 @@ function startMusic(){
     music.play()
     .then(function(){
 
-        musicButton.innerHTML="❚❚";
+        musicButton.innerHTML = "❚❚";
 
     })
     .catch(function(){
 
-        // El navegador puede bloquear
-        // la reproducción automática.
+        // Algunos navegadores
+        // pueden bloquear la reproducción.
 
     });
 
@@ -897,13 +1041,13 @@ function toggleMusic(){
         music.play()
         .then(function(){
 
-            musicButton.innerHTML="❚❚";
+            musicButton.innerHTML = "❚❚";
 
         })
         .catch(function(){
 
             alert(
-            "No se pudo reproducir la música. Revisá que el archivo musica.mp3.mp3 esté en el mismo lugar que index.html."
+                "No se pudo reproducir la música. Revisá que el archivo musica.mp3.mp3 esté en el mismo lugar que index.html."
             );
 
         });
@@ -912,7 +1056,7 @@ function toggleMusic(){
 
         music.pause();
 
-        musicButton.innerHTML="♫";
+        musicButton.innerHTML = "♫";
 
     }
 
