@@ -361,27 +361,18 @@ Un poquito de mí
 
 <div class="line"></div>
 
-<div class="photos">
+.photos{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
 
-<!-- Foto 1 · Quinceañera con vestido dorado -->
-<img
-src="https://images.pexels.com/photos/33369535/pexels-photo-33369535.jpeg?auto=compress&cs=tinysrgb&w=900"
-alt="Quinceañera con vestido elegante dorado">
-
-<!-- Foto 2 · Retrato editorial -->
-<img
-src="https://images.pexels.com/photos/34538039/pexels-photo-34538039.jpeg?auto=compress&cs=tinysrgb&w=900"
-alt="Retrato elegante de quinceañera">
-
-<!-- Foto 3 · Quinceañera en exterior -->
-<img
-src="https://images.pexels.com/photos/31330411/pexels-photo-31330411.jpeg?auto=compress&cs=tinysrgb&w=900"
-alt="Quinceañera con vestido elegante">
-
-<!-- Foto 4 · Quinceañera en jardín -->
-<img
-src="https://cdn.pixabay.com/photo/2021/08/25/09/29/woman-6574775_1280.jpg"
-alt="Quinceañera en jardín">
+.photos img{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+}
 
 </div>
 
