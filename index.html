@@ -826,15 +826,18 @@ footer p{
 
 <!-- BOTÓN MÚSICA -->
 
+<!-- BOTÓN MÚSICA -->
+
 <button
   class="music-btn"
+  id="musicButton"
   onclick="toggleMusic()"
   aria-label="Activar música">
   ♫
 </button>
 
 <audio id="music" loop>
-  <!-- Agregar aquí el archivo de música -->
+  <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
 
@@ -924,29 +927,25 @@ function copyText(id){
 ========================= */
 
 const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
 
 function toggleMusic(){
-
-  if(!music.src){
-
-    alert("Primero agregá el archivo de música a la invitación.");
-
-    return;
-
-  }
 
   if(music.paused){
 
     music.play();
 
+    musicButton.innerHTML = "❚❚";
+
   }else{
 
     music.pause();
 
+    musicButton.innerHTML = "♫";
+
   }
 
 }
-
 </script>
 
 </body>
