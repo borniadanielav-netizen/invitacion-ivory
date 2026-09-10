@@ -3,55 +3,53 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sofía · Mis 15 años</title>
 
-<meta name="description"
-content="Una noche muy especial · 12 de diciembre de 2026">
+<meta name="description" content="Una noche muy especial · 12 de diciembre de 2026">
 
 <style>
 
-/* =========================
-   BASE
-========================= */
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Georgia, "Times New Roman", serif;
-background:#f5f0e8;
-color:#403a34;
-line-height:1.6;
+    font-family:Georgia, "Times New Roman", serif;
+    background:#f5f0e8;
+    color:#4b4037;
+    line-height:1.6;
 }
 
 section{
-padding:80px 22px;
-max-width:700px;
-margin:auto;
+    padding:65px 20px;
+}
+
+.container{
+    max-width:680px;
+    margin:auto;
 }
 
 h1,h2,h3{
-font-weight:400;
+    font-weight:normal;
+}
+
+h2{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:25px;
+    letter-spacing:1px;
 }
 
 p{
-font-family:Arial, sans-serif;
-}
-
-a{
-text-decoration:none;
-color:inherit;
+    font-size:16px;
 }
 
 /* =========================
@@ -59,88 +57,62 @@ color:inherit;
 ========================= */
 
 .cover{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:30px 20px;
-background:
-linear-gradient(
-rgba(245,240,232,.92),
-rgba(245,240,232,.92)
-),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80");
-
-background-size:cover;
-background-position:center;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#f4eee5;
+    padding:30px 20px;
 }
 
-.cover-content{
-max-width:550px;
+.cover-inner{
+    width:100%;
+    max-width:500px;
 }
 
 .cover-small{
-font-family:Arial,sans-serif;
-font-size:11px;
-letter-spacing:4px;
-text-transform:uppercase;
-margin-bottom:30px;
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:25px;
 }
 
-.cover h1{
-font-size:70px;
-letter-spacing:2px;
-margin-bottom:5px;
+.cover-name{
+    font-size:64px;
+    font-style:italic;
+    line-height:1;
+    margin-bottom:15px;
 }
 
-.cover-subtitle{
-font-size:27px;
-font-style:italic;
-margin-bottom:25px;
+.cover-event{
+    font-size:18px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:25px;
 }
 
 .cover-date{
-font-family:Arial,sans-serif;
-font-size:13px;
-letter-spacing:5px;
-margin-bottom:45px;
+    font-size:15px;
+    letter-spacing:3px;
+    margin-bottom:40px;
 }
 
 .open-btn{
-display:inline-block;
-border:1px solid #74695d;
-padding:15px 32px;
-font-family:Arial,sans-serif;
-font-size:11px;
-letter-spacing:3px;
-text-transform:uppercase;
-transition:.3s;
+    display:inline-block;
+    padding:13px 30px;
+    border:1px solid #806f61;
+    color:#4b4037;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
 }
 
 .open-btn:hover{
-background:#403a34;
-color:white;
-}
-
-/* =========================
-   DECORACIÓN
-========================= */
-
-.line{
-width:70px;
-height:1px;
-background:#9b9083;
-margin:20px auto 30px;
-}
-
-.eyebrow{
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:4px;
-text-transform:uppercase;
-margin-bottom:15px;
-color:#81766a;
+    background:#4b4037;
+    color:#fff;
 }
 
 /* =========================
@@ -148,60 +120,50 @@ color:#81766a;
 ========================= */
 
 .welcome{
-text-align:center;
-background:#eee7dc;
-}
-
-.welcome h2{
-font-size:38px;
-font-style:italic;
-margin-bottom:20px;
+    text-align:center;
+    background:#f5f0e8;
 }
 
 .welcome p{
-font-size:15px;
-max-width:520px;
-margin:auto;
+    max-width:520px;
+    margin:0 auto;
+}
+
+.decor-line{
+    width:50px;
+    height:1px;
+    background:#9b8a7b;
+    margin:20px auto;
 }
 
 /* =========================
-   CUENTA REGRESIVA
+   COUNTDOWN
 ========================= */
 
 .countdown-section{
-text-align:center;
-}
-
-.countdown-section h2{
-font-size:35px;
-font-style:italic;
-margin-bottom:35px;
+    text-align:center;
+    background:#eee6dc;
 }
 
 .countdown{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-max-width:550px;
-margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:30px;
 }
 
 .time-box{
-border-top:1px solid #aaa092;
-border-bottom:1px solid #aaa092;
-padding:15px 5px;
+    width:75px;
 }
 
 .time-number{
-font-size:32px;
-display:block;
+    font-size:30px;
 }
 
 .time-label{
-font-family:Arial,sans-serif;
-font-size:9px;
-letter-spacing:2px;
-text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 /* =========================
@@ -209,85 +171,62 @@ text-transform:uppercase;
 ========================= */
 
 .event{
-text-align:center;
-background:#eee7dc;
-}
-
-.event h2{
-font-size:38px;
-font-style:italic;
-margin-bottom:25px;
+    text-align:center;
 }
 
 .event-card{
-border:1px solid #b5aa9d;
-padding:35px 20px;
-margin-top:25px;
+    max-width:500px;
+    margin:auto;
+    padding:30px 20px;
+    border-top:1px solid #c8bbae;
+    border-bottom:1px solid #c8bbae;
 }
 
-.event-card h3{
-font-size:27px;
-margin-bottom:10px;
-}
-
-.event-date{
-font-family:Arial,sans-serif;
-font-size:12px;
-letter-spacing:3px;
-margin-bottom:25px;
+.event-title{
+    font-size:23px;
+    margin-bottom:10px;
 }
 
 .event-address{
-font-family:Arial,sans-serif;
-font-size:14px;
-margin-bottom:25px;
+    margin-bottom:25px;
 }
 
-.map-buttons{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
+.location-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
 }
 
-.map-btn{
-border:1px solid #74695d;
-padding:12px 20px;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:2px;
-text-transform:uppercase;
+.location-btn{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid #9b8a7b;
+    color:#4b4037;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 /* =========================
-   CONFIRMACIÓN
+   RSVP
 ========================= */
 
 .rsvp{
-text-align:center;
+    background:#eee6dc;
+    text-align:center;
 }
 
-.rsvp h2{
-font-size:38px;
-font-style:italic;
-margin-bottom:20px;
-}
-
-.rsvp p{
-font-size:14px;
-max-width:500px;
-margin:0 auto 25px;
-}
-
-.main-btn{
-display:inline-block;
-background:#403a34;
-color:white;
-padding:15px 30px;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:2px;
-text-transform:uppercase;
+.rsvp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 25px;
+    background:#4b4037;
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
 }
 
 /* =========================
@@ -295,108 +234,87 @@ text-transform:uppercase;
 ========================= */
 
 .gift{
-text-align:center;
-background:#eee7dc;
+    text-align:center;
 }
 
-.gift h2{
-font-size:38px;
-font-style:italic;
-margin-bottom:20px;
+.gift-box{
+    max-width:500px;
+    margin:auto;
+    padding:30px 20px;
+    border:1px solid #d0c5b9;
 }
 
-.gift p{
-font-size:14px;
-margin-bottom:25px;
+.data{
+    margin:18px 0;
 }
 
-.alias-box{
-border:1px solid #b5aa9d;
-padding:25px 15px;
-max-width:430px;
-margin:20px auto;
+.data-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:5px;
 }
 
-.alias-label{
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:8px;
-}
-
-.alias{
-font-family:Arial,sans-serif;
-font-size:18px;
-letter-spacing:1px;
-word-break:break-all;
-margin-bottom:15px;
+.data-value{
+    font-size:17px;
+    word-break:break-word;
 }
 
 .copy-btn{
-background:transparent;
-border:1px solid #74695d;
-padding:10px 20px;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:2px;
-text-transform:uppercase;
-cursor:pointer;
+    margin-top:8px;
+    padding:7px 15px;
+    background:transparent;
+    border:1px solid #9b8a7b;
+    color:#4b4037;
+    cursor:pointer;
+    font-size:11px;
 }
 
-```html
-<!-- =========================
-     GALERÍA
-========================= -->
+/* =========================
+   GALERÍA
+========================= */
 
-<section class="gallery">
-
-<div class="eyebrow">
-Mis momentos
-</div>
-
-<h2>
-Un poquito de mí
-</h2>
-
-<div class="line"></div>
+.gallery{
+    background:#f5f0e8;
+}
 
 .photos{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
+    width:100%;
+    max-width:500px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
 }
 
 .photos img{
-width:100%;
-height:250px;
-object-fit:cover;
-display:block;
+    width:100%;
+    aspect-ratio:1 / 1;
+    height:auto;
+
+    object-fit:cover;
+    display:block;
 }
-
-</div>
-
-</section>
-```
 
 /* =========================
    WHATSAPP
 ========================= */
 
 .contact{
-text-align:center;
-background:#eee7dc;
+    text-align:center;
+    background:#eee6dc;
 }
 
-.contact h2{
-font-size:35px;
-font-style:italic;
-margin-bottom:20px;
-}
-
-.contact p{
-font-size:14px;
-margin-bottom:25px;
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    border:1px solid #806f61;
+    color:#4b4037;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
 }
 
 /* =========================
@@ -404,29 +322,26 @@ margin-bottom:25px;
 ========================= */
 
 footer{
-text-align:center;
-padding:70px 20px;
-background:#403a34;
-color:#f5f0e8;
+    text-align:center;
+    padding:50px 20px;
+    background:#4b4037;
+    color:#f5f0e8;
 }
 
 .footer-brand{
-font-family:Arial,sans-serif;
-font-size:12px;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:12px;
+    font-size:19px;
+    margin-bottom:8px;
 }
 
 .footer-instagram{
-font-family:Arial,sans-serif;
-font-size:13px;
-margin-bottom:20px;
+    font-size:13px;
+    margin-bottom:15px;
 }
 
 .footer-phrase{
-font-size:17px;
-font-style:italic;
+    font-size:12px;
+    font-style:italic;
+    opacity:.85;
 }
 
 /* =========================
@@ -434,18 +349,23 @@ font-style:italic;
 ========================= */
 
 .music-btn{
-position:fixed;
-right:18px;
-bottom:18px;
-width:48px;
-height:48px;
-border-radius:50%;
-border:1px solid #74695d;
-background:#f5f0e8;
-color:#403a34;
-font-size:18px;
-cursor:pointer;
-z-index:999;
+    position:fixed;
+    right:18px;
+    bottom:18px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    border:1px solid #806f61;
+
+    background:#f5f0e8;
+    color:#4b4037;
+
+    font-size:18px;
+    cursor:pointer;
+
+    z-index:999;
 }
 
 /* =========================
@@ -454,29 +374,44 @@ z-index:999;
 
 @media(max-width:600px){
 
-.cover h1{
-font-size:58px;
-}
+    section{
+        padding:55px 18px;
+    }
 
-.cover-subtitle{
-font-size:24px;
-}
+    .cover-name{
+        font-size:52px;
+    }
 
-.countdown{
-gap:5px;
-}
+    .cover-event{
+        font-size:15px;
+        letter-spacing:3px;
+    }
 
-.time-number{
-font-size:25px;
-}
+    .countdown{
+        gap:7px;
+    }
 
-section{
-padding:65px 20px;
-}
+    .time-box{
+        width:65px;
+    }
 
-.photos img{
-height:210px;
-}
+    .time-number{
+        font-size:25px;
+    }
+
+    /*
+       GALERÍA:
+       vuelve al tamaño compacto de la primera versión
+    */
+
+    .photos{
+        max-width:360px;
+        gap:8px;
+    }
+
+    .photos img{
+        aspect-ratio:1 / 1;
+    }
 
 }
 
@@ -486,38 +421,38 @@ height:210px;
 
 <body>
 
+
 <!-- =========================
      PORTADA
 ========================= -->
 
 <section class="cover">
 
-<div class="cover-content">
+    <div class="cover-inner">
 
-<div class="cover-small">
-Una noche muy especial
-</div>
+        <div class="cover-small">
+            Una noche muy especial
+        </div>
 
-<h1>Sofía</h1>
+        <div class="cover-name">
+            Sofía
+        </div>
 
-<div class="cover-subtitle">
-Mis 15 años
-</div>
+        <div class="cover-event">
+            Mis 15 años
+        </div>
 
-<div class="cover-date">
-12 · 12 · 2026
-</div>
+        <div class="cover-date">
+            12 · 12 · 2026
+        </div>
 
-<a
-href="#bienvenida"
-class="open-btn"
-onclick="startMusic()">
+        <a href="#bienvenida"
+           class="open-btn"
+           onclick="startMusic()">
+            Abrir invitación
+        </a>
 
-Abrir invitación
-
-</a>
-
-</div>
+    </div>
 
 </section>
 
@@ -526,92 +461,60 @@ Abrir invitación
      BIENVENIDA
 ========================= -->
 
-<section
-class="welcome"
-id="bienvenida">
+<section class="welcome" id="bienvenida">
 
-<div class="eyebrow">
-Una celebración especial
-</div>
+    <div class="container">
 
-<h2>
-Quiero compartir este momento con vos
-</h2>
+        <h2>Te invito a celebrar conmigo</h2>
 
-<div class="line"></div>
+        <div class="decor-line"></div>
 
-<p>
-Hay momentos que merecen ser celebrados
-y personas que hacen que sean aún más especiales.
-<br><br>
-Por eso quiero invitarte a compartir conmigo
-una noche inolvidable.
-</p>
+        <p>
+            Hay momentos que merecen ser compartidos,
+            y esta noche quiero vivirla junto a las personas
+            que forman parte de mi historia.
+        </p>
+
+    </div>
 
 </section>
 
 
 <!-- =========================
-     CUENTA REGRESIVA
+     COUNTDOWN
 ========================= -->
 
 <section class="countdown-section">
 
-<div class="eyebrow">
-Falta cada vez menos
-</div>
+    <div class="container">
 
-<h2>
-Nos encontramos en...
-</h2>
+        <h2>Falta muy poco</h2>
 
-<div class="countdown">
+        <div class="countdown">
 
-<div class="time-box">
-<span
-class="time-number"
-id="days">
-0
-</span>
-<span class="time-label">
-Días
-</span>
-</div>
+            <div class="time-box">
+                <div class="time-number" id="days">00</div>
+                <div class="time-label">Días</div>
+            </div>
 
-<div class="time-box">
-<span
-class="time-number"
-id="hours">
-0
-</span>
-<span class="time-label">
-Horas
-</span>
-</div>
+            <div class="time-box">
+                <div class="time-number" id="hours">00</div>
+                <div class="time-label">Horas</div>
+            </div>
 
-<div class="time-box">
-<span
-class="time-number"
-id="minutes">
-0
-</span>
-<span class="time-label">
-Minutos
-</span>
-</div>
+            <div class="time-box">
+                <div class="time-number" id="minutes">00</div>
+                <div class="time-label">Minutos</div>
+            </div>
 
-<div class="time-box">
-<span
-class="time-number"
-id="seconds">
-0
-</span>
-<span class="time-label">
-Segundos
-</span>
-</div>
+            <div class="time-box">
+                <div class="time-number" id="seconds">00</div>
+                <div class="time-label">Segundos</div>
+            </div>
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
@@ -622,175 +525,135 @@ Segundos
 
 <section class="event">
 
-<div class="eyebrow">
-El gran día
-</div>
+    <div class="container">
 
-<h2>
-La celebración
-</h2>
+        <h2>El gran día</h2>
 
-<div class="event-card">
+        <div class="event-card">
 
-<h3>
-Mis 15 años
-</h3>
+            <div class="event-title">
+                Salón de eventos
+            </div>
 
-<div class="event-date">
-SÁBADO · 12 DE DICIEMBRE · 2026
-</div>
+            <div class="event-address">
+                Dirección del evento · Buenos Aires
+            </div>
 
-<p class="event-address">
+            <div class="location-buttons">
 
-<strong>
-Salón de eventos
-</strong>
+                <a
+                href="https://www.google.com/maps"
+                target="_blank"
+                class="location-btn">
+                    Google Maps
+                </a>
 
-<br>
+                <a
+                href="https://www.waze.com/"
+                target="_blank"
+                class="location-btn">
+                    Waze
+                </a>
 
-Dirección del evento · Buenos Aires
+            </div>
 
-</p>
+        </div>
 
-<div class="map-buttons">
-
-<a
-class="map-btn"
-href="https://www.google.com/maps"
-target="_blank">
-
-Google Maps
-
-</a>
-
-<a
-class="map-btn"
-href="https://www.waze.com/"
-target="_blank">
-
-Waze
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- =========================
-     RSVP
+     CONFIRMACIÓN
 ========================= -->
 
 <section class="rsvp">
 
-<div class="eyebrow">
-Confirmación
-</div>
+    <div class="container">
 
-<h2>
-¿Nos acompañás?
-</h2>
+        <h2>¿Nos acompañás?</h2>
 
-<div class="line"></div>
+        <p>
+            Confirmá tu asistencia para que podamos
+            preparar todo para esta noche especial.
+        </p>
 
-<p>
+        <a
+        href="https://forms.google.com/"
+        target="_blank"
+        class="rsvp-btn">
+            Confirmar asistencia
+        </a>
 
-Tu confirmación nos ayuda muchísimo
-a preparar esta noche tan especial.
-
-<br><br>
-
-Por favor confirmá tu asistencia
-completando el siguiente formulario.
-
-</p>
-
-<a
-href="https://forms.google.com/"
-target="_blank"
-class="main-btn">
-
-Confirmar asistencia
-
-</a>
+    </div>
 
 </section>
 
 
 <!-- =========================
-     REGALO / CBU
+     REGALO
 ========================= -->
 
 <section class="gift">
 
-<div class="eyebrow">
-Un detalle
-</div>
+    <div class="container">
 
-<h2>
-Si querés hacerme un regalo
-</h2>
+        <h2>Un detalle especial</h2>
 
-<div class="line"></div>
+        <p>
+            Si deseás hacerme un regalo,
+            podés hacerlo mediante transferencia.
+        </p>
 
-<p>
+        <br>
 
-Si deseás regalarme algo,
-podés hacerlo mediante transferencia.
+        <div class="gift-box">
 
-</p>
+            <div class="data">
 
+                <div class="data-label">
+                    Alias
+                </div>
 
-<div class="alias-box">
+                <div
+                class="data-value"
+                id="alias">
+                    SOFIA.15.AÑOS
+                </div>
 
-<div class="alias-label">
-Alias
-</div>
+                <button
+                class="copy-btn"
+                onclick="copyText('alias')">
+                    Copiar alias
+                </button>
 
-<div
-class="alias"
-id="alias">
-
-SOFIA.15.AÑOS
-
-</div>
-
-<button
-class="copy-btn"
-onclick="copyAlias()">
-
-Copiar alias
-
-</button>
-
-</div>
+            </div>
 
 
-<div class="alias-box">
+            <div class="data">
 
-<div class="alias-label">
-CBU
-</div>
+                <div class="data-label">
+                    CBU
+                </div>
 
-<div
-class="alias"
-id="cbu">
+                <div
+                class="data-value"
+                id="cbu">
+                    0000000000000000000000
+                </div>
 
-0000000000000000000000
+                <button
+                class="copy-btn"
+                onclick="copyText('cbu')">
+                    Copiar CBU
+                </button>
 
-</div>
+            </div>
 
-<button
-class="copy-btn"
-onclick="copyCBU()">
+        </div>
 
-Copiar CBU
-
-</button>
-
-</div>
+    </div>
 
 </section>
 
@@ -801,35 +664,33 @@ Copiar CBU
 
 <section class="gallery">
 
-<div class="eyebrow">
-Mis momentos
-</div>
+    <div class="container">
 
-<h2>
-Un poquito de mí
-</h2>
+        <h2>Momentos</h2>
 
-<div class="line"></div>
+        <div class="decor-line"></div>
 
-<div class="photos">
+        <div class="photos">
 
-<img
-src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80"
-alt="Celebración">
+            <img
+            src="https://images.pexels.com/photos/33404522/pexels-photo-33404522.jpeg"
+            alt="Quinceañera">
 
-<img
-src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80"
-alt="Celebración">
+            <img
+            src="https://images.pexels.com/photos/33404523/pexels-photo-33404523.jpeg"
+            alt="Quinceañera">
 
-<img
-src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80"
-alt="Celebración">
+            <img
+            src="https://images.pexels.com/photos/33404525/pexels-photo-33404525.jpeg"
+            alt="Quinceañera">
 
-<img
-src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80"
-alt="Celebración">
+            <img
+            src="https://images.pexels.com/photos/33404518/pexels-photo-33404518.jpeg"
+            alt="Quinceañera">
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
@@ -840,27 +701,22 @@ alt="Celebración">
 
 <section class="contact">
 
-<div class="eyebrow">
-¿Tenés alguna consulta?
-</div>
+    <div class="container">
 
-<h2>
-Hablemos
-</h2>
+        <h2>¿Tenés alguna consulta?</h2>
 
-<p>
-Si necesitás comunicarte,
-podés hacerlo directamente por WhatsApp.
-</p>
+        <p>
+            Podés comunicarte por WhatsApp.
+        </p>
 
-<a
-href="https://wa.me/5491100000000"
-target="_blank"
-class="main-btn">
+        <a
+        href="https://wa.me/5491100000000"
+        target="_blank"
+        class="whatsapp-btn">
+            Escribir por WhatsApp
+        </a>
 
-Escribir por WhatsApp
-
-</a>
+    </div>
 
 </section>
 
@@ -871,17 +727,17 @@ Escribir por WhatsApp
 
 <footer>
 
-<div class="footer-brand">
-Ivory Diseños Digitales
-</div>
+    <div class="footer-brand">
+        Ivory Diseños Digitales
+    </div>
 
-<div class="footer-instagram">
-@ivory.dd
-</div>
+    <div class="footer-instagram">
+        @ivory.dd
+    </div>
 
-<div class="footer-phrase">
-Diseñamos el comienzo de momentos inolvidables.
-</div>
+    <div class="footer-phrase">
+        Diseñamos el comienzo de momentos inolvidables.
+    </div>
 
 </footer>
 
@@ -890,13 +746,11 @@ Diseñamos el comienzo de momentos inolvidables.
      MÚSICA
 ========================= -->
 
-<audio
-id="music"
-loop>
+<audio id="music" loop>
 
-<source
-src="musica.mp3.mp3"
-type="audio/mpeg">
+    <source
+    src="musica.mp3.mp3"
+    type="audio/mpeg">
 
 </audio>
 
@@ -907,12 +761,97 @@ id="musicButton"
 onclick="toggleMusic()"
 aria-label="Activar música">
 
-♫
+    ♫
 
 </button>
 
 
 <script>
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
+
+const eventDate =
+new Date("December 12, 2026 21:00:00").getTime();
+
+function updateCountdown(){
+
+    const now =
+    new Date().getTime();
+
+    const distance =
+    eventDate - now;
+
+    if(distance <= 0){
+
+        document.getElementById("days").innerText="00";
+        document.getElementById("hours").innerText="00";
+        document.getElementById("minutes").innerText="00";
+        document.getElementById("seconds").innerText="00";
+
+        return;
+    }
+
+    const days =
+    Math.floor(
+        distance /
+        (1000 * 60 * 60 * 24)
+    );
+
+    const hours =
+    Math.floor(
+        (distance %
+        (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes =
+    Math.floor(
+        (distance %
+        (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds =
+    Math.floor(
+        (distance %
+        (1000 * 60)) /
+        1000
+    );
+
+    document.getElementById("days").innerText =
+    String(days).padStart(2,"0");
+
+    document.getElementById("hours").innerText =
+    String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+    String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+    String(seconds).padStart(2,"0");
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* =========================
+   COPIAR ALIAS / CBU
+========================= */
+
+function copyText(id){
+
+    const text =
+    document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("Copiado correctamente");
+}
+
 
 /* =========================
    MÚSICA
@@ -927,167 +866,52 @@ document.getElementById("musicButton");
 
 function startMusic(){
 
-music.play()
-.then(function(){
+    music.play()
+    .then(function(){
 
-musicButton.innerHTML="❚❚";
+        musicButton.innerHTML="❚❚";
 
-})
-.catch(function(){
+    })
+    .catch(function(){
 
-});
+        // El navegador puede bloquear
+        // la reproducción automática.
+
+    });
 
 }
 
 
 function toggleMusic(){
 
-if(music.paused){
+    if(music.paused){
 
-music.play()
-.then(function(){
+        music.play()
+        .then(function(){
 
-musicButton.innerHTML="❚❚";
+            musicButton.innerHTML="❚❚";
 
-})
-.catch(function(){
+        })
+        .catch(function(){
 
-alert(
-"No se pudo reproducir la música. Revisá que el archivo musica.mp3.mp3 esté en la misma carpeta que index.html."
-);
+            alert(
+            "No se pudo reproducir la música. Revisá que el archivo musica.mp3.mp3 esté en el mismo lugar que index.html."
+            );
 
-});
+        });
 
-}else{
+    }else{
 
-music.pause();
+        music.pause();
 
-musicButton.innerHTML="♫";
+        musicButton.innerHTML="♫";
 
-}
-
-}
-
-
-/* =========================
-   CUENTA REGRESIVA
-========================= */
-
-const eventDate =
-new Date("December 12, 2026 21:00:00").getTime();
-
-
-function updateCountdown(){
-
-const now =
-new Date().getTime();
-
-const distance =
-eventDate - now;
-
-
-if(distance <= 0){
-
-document.getElementById("days").innerHTML="0";
-
-document.getElementById("hours").innerHTML="0";
-
-document.getElementById("minutes").innerHTML="0";
-
-document.getElementById("seconds").innerHTML="0";
-
-return;
-
-}
-
-
-const days =
-Math.floor(
-distance /
-(1000 * 60 * 60 * 24)
-);
-
-
-const hours =
-Math.floor(
-(distance %
-(1000 * 60 * 60 * 24))
-/
-(1000 * 60 * 60)
-);
-
-
-const minutes =
-Math.floor(
-(distance %
-(1000 * 60 * 60))
-/
-(1000 * 60)
-);
-
-
-const seconds =
-Math.floor(
-(distance %
-(1000 * 60))
-/
-1000
-);
-
-
-document.getElementById("days").innerHTML =
-days;
-
-document.getElementById("hours").innerHTML =
-hours;
-
-document.getElementById("minutes").innerHTML =
-minutes;
-
-document.getElementById("seconds").innerHTML =
-seconds;
-
-}
-
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
-
-/* =========================
-   COPIAR ALIAS
-========================= */
-
-function copyAlias(){
-
-const alias =
-document.getElementById("alias").innerText;
-
-navigator.clipboard.writeText(alias);
-
-alert("Alias copiado");
-
-}
-
-
-/* =========================
-   COPIAR CBU
-========================= */
-
-function copyCBU(){
-
-const cbu =
-document.getElementById("cbu").innerText;
-
-navigator.clipboard.writeText(cbu);
-
-alert("CBU copiado");
+    }
 
 }
 
 </script>
 
+
 </body>
 </html>
-
