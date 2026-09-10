@@ -3,421 +3,1297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mis 15 años | Sofía</title>
 
+  <meta name="description" content="Invitación digital de Sofía - Mis 15 años">
+
   <style>
+
+    /* =====================================================
+       IVORY DISEÑOS DIGITALES
+       PLANTILLA INVITACIÓN WEB
+       ===================================================== */
+
+    :root {
+      --ivory: #f7f2e9;
+      --beige: #eee5d7;
+      --beige-dark: #dfd2c0;
+      --brown: #5b4a3d;
+      --brown-light: #806e5f;
+      --white: #fffdf9;
+      --line: rgba(91, 74, 61, 0.20);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
+      background: var(--ivory);
+      color: var(--brown);
       font-family: Georgia, "Times New Roman", serif;
-      background: #f5f0e8;
-      color: #4b4038;
-      text-align: center;
-      line-height: 1.6;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
+    /* =========================
+       BOTÓN DE MÚSICA
+       ========================= */
 
-    .portada {
-      min-height: 100vh;
+    .music-button {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      z-index: 1000;
+
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+      border: 1px solid var(--line);
+
+      background: rgba(255, 253, 249, 0.90);
+      color: var(--brown);
+
+      cursor: pointer;
+
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background: #eee5d8;
-      padding: 40px 20px;
+      justify-content: center;
+
+      font-size: 18px;
+
+      box-shadow: 0 5px 20px rgba(70, 50, 35, 0.08);
     }
 
-    .pequeno {
+    /* =========================
+       PORTADA
+       ========================= */
+
+    .cover {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 40px 25px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(255,255,255,0.45),
+          transparent 60%
+        ),
+        var(--beige);
+    }
+
+    .cover-content {
+      max-width: 650px;
+
+      animation: appear 1.4s ease;
+    }
+
+    .brand {
+      font-size: 13px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      margin-bottom: 35px;
+      color: var(--brown-light);
+    }
+
+    .small-title {
       font-size: 14px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+
+      margin-bottom: 15px;
     }
 
-    h1 {
-      font-size: 64px;
+    .name {
+      font-size: clamp(55px, 15vw, 100px);
       font-weight: normal;
-      letter-spacing: 3px;
+      line-height: 1;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 18px;
     }
 
-    h2 {
-      font-size: 32px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
+    .event {
+      font-size: 17px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
 
-    .fecha {
-      font-size: 18px;
-      letter-spacing: 3px;
-      margin: 20px 0 35px;
-    }
-
-    .boton {
-      display: inline-block;
-      padding: 13px 28px;
-      border: 1px solid #75675b;
-      color: #4b4038;
-      text-decoration: none;
-      background: transparent;
-      cursor: pointer;
-      font-size: 14px;
-      letter-spacing: 1px;
-      transition: 0.3s;
-    }
-
-    .boton:hover {
-      background: #4b4038;
-      color: white;
-    }
-
-    .frase {
-      font-size: 21px;
-      font-style: italic;
       margin-bottom: 25px;
     }
 
-    .contador {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 30px;
+    .date {
+      font-size: 17px;
+      letter-spacing: 3px;
+
+      margin-bottom: 40px;
     }
 
-    .tiempo {
-      min-width: 75px;
-      padding: 15px 10px;
-      border: 1px solid #c9bdae;
+    .open-button {
+      display: inline-block;
+
+      padding: 13px 32px;
+
+      border: 1px solid var(--brown);
+
+      color: var(--brown);
+      text-decoration: none;
+
+      font-size: 12px;
+      letter-spacing: 2px;
+
+      transition: all .3s ease;
     }
 
-    .numero {
-      display: block;
-      font-size: 28px;
+    .open-button:hover {
+      background: var(--brown);
+      color: var(--white);
     }
 
-    .label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+    /* =========================
+       SECCIONES
+       ========================= */
 
-    .ubicacion,
-    .regalos,
-    .rsvp {
-      background: #faf7f2;
-    }
-
-    .botones {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .dato {
-      margin: 15px auto;
-      padding: 15px;
-      max-width: 400px;
-      background: #eee5d8;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 25px;
-    }
-
-    .galeria img {
+    section {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
-      background: #ddd2c4;
+      max-width: 760px;
+
+      margin: auto;
+
+      padding: 85px 25px;
+      text-align: center;
     }
+
+    .white-section {
+      background: var(--white);
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+
+      color: var(--brown-light);
+
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 7vw, 42px);
+
+      font-weight: normal;
+
+      line-height: 1.2;
+
+      margin-bottom: 25px;
+    }
+
+    .divider {
+      width: 55px;
+      height: 1px;
+
+      background: var(--brown-light);
+
+      margin: 25px auto;
+      opacity: .45;
+    }
+
+    .intro {
+      font-size: 19px;
+
+      max-width: 580px;
+
+      margin: auto;
+
+      color: var(--brown-light);
+    }
+
+    .quote {
+      font-size: 25px;
+      font-style: italic;
+
+      max-width: 600px;
+
+      margin: auto;
+
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CUENTA REGRESIVA
+       ========================= */
+
+    .countdown {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 10px;
+
+      max-width: 600px;
+
+      margin: 40px auto 0;
+    }
+
+    .count-box {
+      padding: 18px 5px;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .count-number {
+      display: block;
+
+      font-size: clamp(28px, 7vw, 42px);
+
+      font-weight: normal;
+
+      line-height: 1.2;
+    }
+
+    .count-label {
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      color: var(--brown-light);
+    }
+
+    /* =========================
+       EVENTO
+       ========================= */
+
+    .event-card {
+      margin: 35px auto;
+
+      max-width: 500px;
+
+      padding: 35px 20px;
+
+      border: 1px solid var(--line);
+
+      background: rgba(255,255,255,.35);
+    }
+
+    .event-icon {
+      font-size: 25px;
+
+      margin-bottom: 12px;
+    }
+
+    .event-info {
+      margin-bottom: 25px;
+    }
+
+    .event-info strong {
+      display: block;
+
+      font-size: 18px;
+
+      font-weight: normal;
+
+      margin-bottom: 5px;
+    }
+
+    .event-info span {
+      color: var(--brown-light);
+    }
+
+    /* =========================
+       BOTONES
+       ========================= */
+
+    .buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+
+      padding: 12px 23px;
+
+      border: 1px solid var(--brown);
+
+      color: var(--brown);
+
+      text-decoration: none;
+
+      background: transparent;
+
+      cursor: pointer;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+
+      transition: all .3s ease;
+    }
+
+    .button:hover {
+      background: var(--brown);
+
+      color: var(--white);
+    }
+
+    .button-filled {
+      background: var(--brown);
+
+      color: var(--white);
+    }
+
+    .button-filled:hover {
+      background: var(--brown-light);
+    }
+
+    /* =========================
+       RSVP
+       ========================= */
+
+    .rsvp-box {
+      max-width: 570px;
+
+      margin: auto;
+    }
+
+    .rsvp-text {
+      color: var(--brown-light);
+
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       REGALOS
+       ========================= */
+
+    .gift-box {
+      max-width: 520px;
+
+      margin: 30px auto;
+
+      padding: 35px 20px;
+
+      border: 1px solid var(--line);
+
+      background: rgba(255,255,255,.40);
+    }
+
+    .bank-data {
+      margin: 25px auto;
+
+      padding: 20px;
+
+      background: var(--beige);
+
+      text-align: left;
+
+      max-width: 390px;
+    }
+
+    .bank-row {
+      margin-bottom: 15px;
+    }
+
+    .bank-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .bank-label {
+      display: block;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      color: var(--brown-light);
+    }
+
+    .bank-value {
+      font-size: 16px;
+
+      word-break: break-word;
+    }
+
+    /* =========================
+       GALERÍA
+       ========================= */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 10px;
+
+      max-width: 650px;
+
+      margin: 35px auto 0;
+    }
+
+    .gallery img {
+      width: 100%;
+
+      height: 280px;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: saturate(.80);
+
+      transition: transform .4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    /* =========================
+       INFORMACIÓN
+       ========================= */
+
+    .info-list {
+      max-width: 520px;
+
+      margin: 30px auto;
+
+      text-align: left;
+    }
+
+    .info-item {
+      padding: 17px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-item strong {
+      display: block;
+
+      font-weight: normal;
+
+      font-size: 16px;
+    }
+
+    .info-item span {
+      color: var(--brown-light);
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
-      padding: 50px 20px;
-      background: #4b4038;
-      color: white;
+      padding: 70px 25px;
+
+      text-align: center;
+
+      background: var(--beige-dark);
+
+      color: var(--brown);
     }
 
-    footer p {
-      margin-bottom: 10px;
+    .footer-brand {
+      font-size: 12px;
+
+      letter-spacing: 4px;
+
+      margin-top: 25px;
     }
 
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 48px;
+    /* =========================
+       ANIMACIONES
+       ========================= */
+
+    @keyframes appear {
+
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
 
-      h2 {
-        font-size: 27px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
 
-      .galeria img {
-        height: 170px;
-      }
     }
+
+    .fade {
+
+      animation: appear 1s ease both;
+
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .countdown {
+        gap: 5px;
+      }
+
+      .count-box {
+        padding: 15px 2px;
+      }
+
+      .gallery img {
+        height: 190px;
+      }
+
+      .buttons {
+        flex-direction: column;
+
+        align-items: center;
+      }
+
+      .button {
+        width: 100%;
+
+        max-width: 280px;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- PORTADA -->
-  <section class="portada">
 
-    <p class="pequeno">Una noche muy especial</p>
+<!-- =========================
+     BOTÓN MÚSICA
+     ========================= -->
 
-    <h1>Sofía</h1>
+<button
+  class="music-button"
+  id="musicButton"
+  onclick="toggleMusic()"
+  aria-label="Activar música">
 
-    <p class="pequeno">Mis 15 años</p>
+  ♫
 
-    <p class="fecha">12 · 12 · 2026</p>
+</button>
 
-    <a href="#invitacion" class="boton">
+<audio id="music" loop>
+  <!--
+  COLOCÁ ACÁ EL LINK DE TU MÚSICA
+  Ejemplo:
+  <source src="musica.mp3" type="audio/mpeg">
+  -->
+</audio>
+
+
+<!-- =========================
+     PORTADA
+     ========================= -->
+
+<header class="cover">
+
+  <div class="cover-content">
+
+    <p class="brand">
+      Ivory Diseños Digitales
+    </p>
+
+    <p class="small-title">
+      Una noche muy especial
+    </p>
+
+    <h1 class="name">
+      Sofía
+    </h1>
+
+    <p class="event">
+      Mis 15 años
+    </p>
+
+    <p class="date">
+      12 · 12 · 2026
+    </p>
+
+    <a
+      href="#bienvenida"
+      class="open-button"
+      onclick="activarMusica()">
+
       ABRIR INVITACIÓN
+
     </a>
 
-  </section>
+  </div>
+
+</header>
 
 
-  <!-- BIENVENIDA -->
-  <section id="invitacion">
+<!-- =========================
+     BIENVENIDA
+     ========================= -->
 
-    <p class="frase">
-      "Hay momentos que merecen ser celebrados
-      y recuerdos que duran para siempre."
-    </p>
+<section id="bienvenida">
 
-    <p>
-      Quiero compartir con vos una noche muy especial
-      y me encantaría que seas parte de este momento.
-    </p>
+  <p class="section-label">
+    Te espero
+  </p>
 
-  </section>
+  <p class="quote">
+    “Hay momentos que merecen ser celebrados
+    y recuerdos que duran para siempre.”
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="intro">
+
+    Quiero compartir con vos una noche muy especial
+    y me encantaría que seas parte de este momento.
+
+  </p>
+
+</section>
 
 
-  <!-- CUENTA REGRESIVA -->
-  <section>
+<!-- =========================
+     CUENTA REGRESIVA
+     ========================= -->
 
-    <h2>Falta cada vez menos</h2>
+<section class="white-section">
 
-    <div class="contador">
+  <p class="section-label">
+    La cuenta regresiva comenzó
+  </p>
 
-      <div class="tiempo">
-        <span class="numero" id="dias">00</span>
-        <span class="label">Días</span>
+  <h2>
+    Falta cada vez menos
+  </h2>
+
+  <div class="countdown">
+
+    <div class="count-box">
+      <span
+        class="count-number"
+        id="days">
+        00
+      </span>
+
+      <span class="count-label">
+        Días
+      </span>
+    </div>
+
+
+    <div class="count-box">
+      <span
+        class="count-number"
+        id="hours">
+        00
+      </span>
+
+      <span class="count-label">
+        Horas
+      </span>
+    </div>
+
+
+    <div class="count-box">
+      <span
+        class="count-number"
+        id="minutes">
+        00
+      </span>
+
+      <span class="count-label">
+        Minutos
+      </span>
+    </div>
+
+
+    <div class="count-box">
+      <span
+        class="count-number"
+        id="seconds">
+        00
+      </span>
+
+      <span class="count-label">
+        Segundos
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EVENTO / UBICACIÓN
+     ========================= -->
+
+<section>
+
+  <p class="section-label">
+    El gran día
+  </p>
+
+  <h2>
+    ¿Dónde nos encontramos?
+  </h2>
+
+  <div class="event-card">
+
+    <div class="event-info">
+
+      <div class="event-icon">
+        ♡
       </div>
 
-      <div class="tiempo">
-        <span class="numero" id="horas">00</span>
-        <span class="label">Horas</span>
-      </div>
+      <strong>
+        Sábado 12 de diciembre
+      </strong>
 
-      <div class="tiempo">
-        <span class="numero" id="minutos">00</span>
-        <span class="label">Minutos</span>
-      </div>
-
-      <div class="tiempo">
-        <span class="numero" id="segundos">00</span>
-        <span class="label">Segundos</span>
-      </div>
+      <span>
+        21:00 hs
+      </span>
 
     </div>
 
-  </section>
 
+    <div class="event-info">
 
-  <!-- UBICACIÓN -->
-  <section class="ubicacion">
+      <strong>
+        Salón de eventos Ivory
+      </strong>
 
-    <h2>¿Dónde nos encontramos?</h2>
-
-    <p>
-      Sábado 12 de diciembre<br>
-      21:00 hs
-    </p>
-
-    <p style="margin-top:15px;">
-      Salón de eventos Ivory<br>
-      Buenos Aires, Argentina
-    </p>
-
-    <div class="botones">
-
-      <a
-        href="https://www.google.com/maps"
-        target="_blank"
-        class="boton">
-        GOOGLE MAPS
-      </a>
-
-      <a
-        href="https://waze.com/ul"
-        target="_blank"
-        class="boton">
-        WAZE
-      </a>
+      <span>
+        Buenos Aires, Argentina
+      </span>
 
     </div>
 
-  </section>
+  </div>
 
 
-  <!-- RSVP -->
-  <section class="rsvp">
+  <div class="buttons">
 
-    <h2>Confirmá tu asistencia</h2>
+    <a
+      href="https://www.google.com/maps"
+      target="_blank"
+      class="button">
 
-    <p>
+      VER EN GOOGLE MAPS
+
+    </a>
+
+
+    <a
+      href="https://waze.com/ul"
+      target="_blank"
+      class="button">
+
+      VER EN WAZE
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RSVP
+     ========================= -->
+
+<section class="white-section">
+
+  <div class="rsvp-box">
+
+    <p class="section-label">
+      RSVP
+    </p>
+
+    <h2>
+      ¿Vas a acompañarme?
+    </h2>
+
+    <p class="rsvp-text">
+
       Tu confirmación nos ayuda muchísimo
       a organizar esta noche especial.
+
     </p>
 
-    <div class="botones">
 
-      <a
-        href="https://forms.google.com"
-        target="_blank"
-        class="boton">
-        CONFIRMAR ASISTENCIA
-      </a>
+    <a
+      href="https://forms.google.com"
+      target="_blank"
+      class="button button-filled">
+
+      CONFIRMAR ASISTENCIA
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     REGALOS
+     ========================= -->
+
+<section>
+
+  <p class="section-label">
+    Un detalle
+  </p>
+
+  <h2>
+    Si querés hacerme un regalo...
+  </h2>
+
+  <p class="intro">
+
+    Tu presencia es mi mejor regalo.
+    Pero si querés tener un detalle conmigo,
+    podés hacerlo mediante transferencia.
+
+  </p>
+
+
+  <div class="gift-box">
+
+    <div class="bank-data">
+
+      <div class="bank-row">
+
+        <span class="bank-label">
+          Alias
+        </span>
+
+        <span class="bank-value">
+          SOFIA.15
+        </span>
+
+      </div>
+
+
+      <div class="bank-row">
+
+        <span class="bank-label">
+          CBU
+        </span>
+
+        <span class="bank-value">
+          0000000000000000000000
+        </span>
+
+      </div>
+
+
+      <div class="bank-row">
+
+        <span class="bank-label">
+          Titular
+        </span>
+
+        <span class="bank-value">
+          Sofía Apellido
+        </span>
+
+      </div>
 
     </div>
 
-  </section>
+
+    <div class="buttons">
+
+      <button
+        class="button"
+        onclick="copiar('SOFIA.15')">
+
+        COPIAR ALIAS
+
+      </button>
 
 
-  <!-- REGALOS -->
-  <section class="regalos">
+      <button
+        class="button"
+        onclick="copiar('0000000000000000000000')">
 
-    <h2>Un detalle para Sofía</h2>
+        COPIAR CBU
 
-    <p>
-      Tu presencia es mi mejor regalo.
-      Pero si querés tener un detalle conmigo,
-      podés hacerlo mediante transferencia.
-    </p>
-
-    <div class="dato">
-      <strong>Alias</strong><br>
-      SOFIA.15
-    </div>
-
-    <button
-      class="boton"
-      onclick="copiarAlias()">
-      COPIAR ALIAS
-    </button>
-
-  </section>
-
-
-  <!-- GALERÍA -->
-  <section>
-
-    <h2>Momentos</h2>
-
-    <p>
-      Algunas fotos para compartir
-      la previa de esta celebración.
-    </p>
-
-    <div class="galeria">
-
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Foto">
-      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600" alt="Foto">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600" alt="Foto">
-      <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600" alt="Foto">
+      </button>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- CIERRE -->
-  <footer>
+<!-- =========================
+     GALERÍA
+     ========================= -->
 
-    <p>Gracias por ser parte de este momento.</p>
+<section class="white-section">
 
-    <p>
-      Organizar una fiesta tiene que ser
-      un disfrute, no un caos. 🤍
-    </p>
+  <p class="section-label">
+    Algunos recuerdos
+  </p>
 
-    <p style="margin-top:20px;">
-      IVORY DISEÑOS DIGITALES
-    </p>
+  <h2>
+    Momentos
+  </h2>
 
-  </footer>
+  <p class="intro">
 
+    Una pequeña mirada a algunos momentos
+    antes de esta celebración.
 
-  <script>
-
-    // FECHA DEL EVENTO
-    const fechaEvento = new Date("December 12, 2026 21:00:00").getTime();
-
-    function actualizarContador() {
-
-      const ahora = new Date().getTime();
-
-      const diferencia = fechaEvento - ahora;
-
-      if (diferencia <= 0) {
-        document.getElementById("dias").innerText = "00";
-        document.getElementById("horas").innerText = "00";
-        document.getElementById("minutos").innerText = "00";
-        document.getElementById("segundos").innerText = "00";
-        return;
-      }
-
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-
-      const horas = Math.floor(
-        (diferencia / (1000 * 60 * 60)) % 24
-      );
-
-      const minutos = Math.floor(
-        (diferencia / (1000 * 60)) % 60
-      );
-
-      const segundos = Math.floor(
-        (diferencia / 1000) % 60
-      );
-
-      document.getElementById("dias").innerText = dias;
-      document.getElementById("horas").innerText = horas;
-      document.getElementById("minutos").innerText = minutos;
-      document.getElementById("segundos").innerText = segundos;
-    }
-
-    actualizarContador();
-
-    setInterval(actualizarContador, 1000);
+  </p>
 
 
-    // COPIAR ALIAS
-    function copiarAlias() {
+  <div class="gallery">
 
-      const alias = "SOFIA.15";
+    <img
+      src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900"
+      alt="Momento especial">
 
-      navigator.clipboard.writeText(alias);
 
-      alert("¡Alias copiado! 🤍");
-    }
+    <img
+      src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900"
+      alt="Celebración">
 
-  </script>
+
+    <img
+      src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900"
+      alt="Decoración">
+
+
+    <img
+      src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=900"
+      alt="Fiesta">
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     INFORMACIÓN
+     ========================= -->
+
+<section>
+
+  <p class="section-label">
+    Para tener en cuenta
+  </p>
+
+  <h2>
+    Información
+  </h2>
+
+
+  <div class="info-list">
+
+    <div class="info-item">
+
+      <strong>
+        Dress code
+      </strong>
+
+      <span>
+        Elegante
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <strong>
+        Horario
+      </strong>
+
+      <span>
+        Te esperamos desde las 21:00 hs
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <strong>
+        Confirmación
+      </strong>
+
+      <span>
+        Por favor confirmá tu asistencia previamente.
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHATSAPP
+     ========================= -->
+
+<section class="white-section">
+
+  <p class="section-label">
+    ¿Tenés alguna consulta?
+  </p>
+
+  <h2>
+    Estamos para ayudarte
+  </h2>
+
+  <a
+    href="https://wa.me/5491100000000"
+    target="_blank"
+    class="button">
+
+    ESCRIBIR POR WHATSAPP
+
+  </a>
+
+</section>
+
+
+<!-- =========================
+     CIERRE
+     ========================= -->
+
+<footer>
+
+  <p class="quote">
+    “Organizar tu fiesta tiene que ser
+    un disfrute, no un caos.”
+  </p>
+
+  <div class="divider"></div>
+
+  <p>
+    Gracias por ser parte de este momento. 🤍
+  </p>
+
+  <p class="footer-brand">
+    IVORY DISEÑOS DIGITALES
+  </p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+     ========================= -->
+
+<script>
+
+
+/* =========================================
+   CUENTA REGRESIVA
+   ========================================= */
+
+const fechaEvento =
+  new Date("December 12, 2026 21:00:00").getTime();
+
+
+function actualizarContador() {
+
+  const ahora =
+    new Date().getTime();
+
+  const diferencia =
+    fechaEvento - ahora;
+
+
+  if (diferencia <= 0) {
+
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
+
+    return;
+
+  }
+
+
+  const dias =
+    Math.floor(
+      diferencia /
+      (1000 * 60 * 60 * 24)
+    );
+
+
+  const horas =
+    Math.floor(
+      (diferencia /
+      (1000 * 60 * 60)) % 24
+    );
+
+
+  const minutos =
+    Math.floor(
+      (diferencia /
+      (1000 * 60)) % 60
+    );
+
+
+  const segundos =
+    Math.floor(
+      (diferencia / 1000) % 60
+    );
+
+
+  document.getElementById("days").innerText =
+    String(dias).padStart(2, "0");
+
+
+  document.getElementById("hours").innerText =
+    String(horas).padStart(2, "0");
+
+
+  document.getElementById("minutes").innerText =
+    String(minutos).padStart(2, "0");
+
+
+  document.getElementById("seconds").innerText =
+    String(segundos).padStart(2, "0");
+
+}
+
+
+actualizarContador();
+
+setInterval(actualizarContador, 1000);
+
+
+/* =========================================
+   COPIAR ALIAS / CBU
+   ========================================= */
+
+function copiar(texto) {
+
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+
+      alert("¡Dato copiado correctamente! 🤍");
+
+    })
+    .catch(() => {
+
+      alert("No se pudo copiar automáticamente.");
+
+    });
+
+}
+
+
+/* =========================================
+   MÚSICA
+   ========================================= */
+
+const music =
+  document.getElementById("music");
+
+const musicButton =
+  document.getElementById("musicButton");
+
+
+function activarMusica() {
+
+  if (!music.src) {
+    return;
+  }
+
+  music.play()
+    .then(() => {
+
+      musicButton.innerHTML = "❚❚";
+
+    })
+    .catch(() => {});
+
+}
+
+
+function toggleMusic() {
+
+  if (!music.src) {
+
+    alert(
+      "Primero agregá una canción a la invitación."
+    );
+
+    return;
+
+  }
+
+
+  if (music.paused) {
+
+    music.play();
+
+    musicButton.innerHTML = "❚❚";
+
+  } else {
+
+    music.pause();
+
+    musicButton.innerHTML = "♫";
+
+  }
+
+}
+
+</script>
+
 
 </body>
 </html>
