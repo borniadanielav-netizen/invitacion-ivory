@@ -7,6 +7,7 @@
 <title>Mis 15 años | Sofía</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
 
 :root{
@@ -43,19 +44,7 @@ section{
   margin:auto;
 }
 
-h1,h2,h3{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:500;
-}
-
-button,
-a{
-  -webkit-tap-highlight-color:transparent;
-}
-
-/* =========================
-   PORTADA
-========================= */
+/* PORTADA */
 
 .cover{
   min-height:100vh;
@@ -64,10 +53,8 @@ a{
   justify-content:center;
   text-align:center;
   padding:35px 25px;
+  background:var(--ivory);
   position:relative;
-  background:
-    linear-gradient(rgba(248,243,235,.72),rgba(248,243,235,.92)),
-    var(--ivory);
 }
 
 .cover-content{
@@ -84,21 +71,23 @@ a{
 }
 
 .cover h1{
-  font-size:72px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:76px;
+  font-weight:500;
   line-height:.9;
   letter-spacing:2px;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .cover .event{
-  font-size:20px;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  margin-bottom:35px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:25px;
+  letter-spacing:4px;
+  margin-bottom:30px;
 }
 
 .date{
-  font-size:14px;
+  font-size:13px;
   letter-spacing:5px;
   color:var(--brown-light);
   margin-bottom:45px;
@@ -110,7 +99,7 @@ a{
   border:1px solid var(--brown);
   color:var(--brown);
   text-decoration:none;
-  font-size:11px;
+  font-size:10px;
   letter-spacing:3px;
   text-transform:uppercase;
   transition:.3s;
@@ -121,23 +110,11 @@ a{
   color:white;
 }
 
-.cover::after{
-  content:"";
-  position:absolute;
-  bottom:25px;
-  width:1px;
-  height:35px;
-  background:var(--brown-light);
-  opacity:.6;
-}
-
-/* =========================
-   GENERAL
-========================= */
+/* GENERAL */
 
 .section-label{
   text-align:center;
-  font-size:10px;
+  font-size:9px;
   letter-spacing:4px;
   text-transform:uppercase;
   color:var(--brown-light);
@@ -146,7 +123,9 @@ a{
 
 .section-title{
   text-align:center;
-  font-size:43px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:45px;
+  font-weight:500;
   margin-bottom:30px;
 }
 
@@ -157,13 +136,7 @@ a{
   margin:25px auto;
 }
 
-.text-center{
-  text-align:center;
-}
-
-/* =========================
-   BIENVENIDA
-========================= */
+/* BIENVENIDA */
 
 .welcome{
   background:var(--white);
@@ -171,25 +144,23 @@ a{
 
 .quote{
   font-family:'Cormorant Garamond',serif;
-  font-size:29px;
+  font-size:30px;
   line-height:1.35;
   text-align:center;
   font-style:italic;
-  margin:25px auto;
   max-width:580px;
+  margin:25px auto;
 }
 
 .welcome p{
   text-align:center;
   max-width:560px;
-  margin:0 auto;
+  margin:auto;
   font-size:14px;
   color:var(--brown-light);
 }
 
-/* =========================
-   COUNTDOWN
-========================= */
+/* CUENTA REGRESIVA */
 
 .countdown{
   display:grid;
@@ -219,23 +190,16 @@ a{
   color:var(--brown-light);
 }
 
-/* =========================
-   UBICACIÓN
-========================= */
+/* UBICACIÓN */
 
 .location{
   background:var(--cream);
   text-align:center;
 }
 
-.location-card{
-  max-width:520px;
-  margin:auto;
-}
-
 .location-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:29px;
+  font-size:30px;
   margin-bottom:5px;
 }
 
@@ -258,7 +222,7 @@ a{
   border:1px solid var(--brown);
   text-decoration:none;
   color:var(--brown);
-  font-size:10px;
+  font-size:9px;
   letter-spacing:2px;
   text-transform:uppercase;
   transition:.3s;
@@ -269,9 +233,7 @@ a{
   color:white;
 }
 
-/* =========================
-   RSVP
-========================= */
+/* RSVP */
 
 .rsvp{
   text-align:center;
@@ -285,9 +247,7 @@ a{
   color:var(--brown-light);
 }
 
-/* =========================
-   REGALO
-========================= */
+/* REGALO */
 
 .gift{
   text-align:center;
@@ -333,9 +293,7 @@ a{
   cursor:pointer;
 }
 
-/* =========================
-   GALERÍA
-========================= */
+/* GALERÍA */
 
 .gallery{
   background:var(--white);
@@ -358,9 +316,7 @@ a{
   margin-top:25px;
 }
 
-/* =========================
-   INFO
-========================= */
+/* INFORMACIÓN */
 
 .info{
   text-align:center;
@@ -380,71 +336,79 @@ a{
   display:block;
   font-family:'Cormorant Garamond',serif;
   font-size:24px;
-  font-weight:500;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
   text-align:center;
   background:var(--cream);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
   text-align:center;
-  padding:45px 20px;
+  padding:65px 20px 55px;
   background:var(--ivory);
 }
 
-footer p{
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--brown-light);
+.footer-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  letter-spacing:1px;
+  margin-bottom:8px;
 }
 
-/* =========================
-   MUSIC
-========================= */
+.footer-instagram{
+  display:inline-block;
+  color:var(--brown);
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.footer-phrase{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  font-style:italic;
+  color:var(--brown-light);
+  max-width:400px;
+  margin:auto;
+}
+
+/* MÚSICA */
 
 .music-btn{
   position:fixed;
   right:18px;
   bottom:18px;
-  width:45px;
-  height:45px;
+  width:48px;
+  height:48px;
   border-radius:50%;
   border:1px solid var(--brown);
-  background:rgba(248,243,235,.92);
+  background:rgba(248,243,235,.95);
   color:var(--brown);
   z-index:20;
   cursor:pointer;
   font-size:16px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
   .cover h1{
-    font-size:62px;
+    font-size:65px;
   }
 
   .cover .event{
-    font-size:17px;
-    letter-spacing:4px;
+    font-size:22px;
   }
 
   .section-title{
-    font-size:39px;
+    font-size:40px;
   }
 
   .quote{
@@ -468,11 +432,7 @@ footer p{
 @media(max-width:380px){
 
   .cover h1{
-    font-size:53px;
-  }
-
-  .cover .event{
-    font-size:15px;
+    font-size:56px;
   }
 
   section{
@@ -480,16 +440,17 @@ footer p{
   }
 
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
-     PORTADA
-========================= -->
 
-<header class="cover" id="inicio">
+<!-- PORTADA -->
+
+<header class="cover">
 
   <div class="cover-content">
 
@@ -516,9 +477,7 @@ footer p{
 </header>
 
 
-<!-- =========================
-     BIENVENIDA
-========================= -->
+<!-- BIENVENIDA -->
 
 <section class="welcome" id="bienvenida">
 
@@ -541,9 +500,7 @@ footer p{
 </section>
 
 
-<!-- =========================
-     CUENTA REGRESIVA
-========================= -->
+<!-- CUENTA REGRESIVA -->
 
 <section>
 
@@ -582,9 +539,7 @@ footer p{
 </section>
 
 
-<!-- =========================
-     UBICACIÓN
-========================= -->
+<!-- UBICACIÓN -->
 
 <section class="location">
 
@@ -596,42 +551,34 @@ footer p{
     ¿Dónde?
   </h2>
 
-  <div class="location-card">
+  <div class="location-name">
+    Salón de eventos
+  </div>
 
-    <div class="location-name">
-      Salón de eventos
-    </div>
+  <div class="location-address">
+    Dirección del evento · Buenos Aires
+  </div>
 
-    <div class="location-address">
-      Dirección del evento · Buenos Aires
-    </div>
+  <div class="buttons">
 
-    <div class="buttons">
+    <a href="https://www.google.com/maps"
+       target="_blank"
+       class="btn">
+       Google Maps
+    </a>
 
-      <a
-        href="https://www.google.com/maps"
-        target="_blank"
-        class="btn">
-        Google Maps
-      </a>
-
-      <a
-        href="https://www.waze.com/"
-        target="_blank"
-        class="btn">
-        Waze
-      </a>
-
-    </div>
+    <a href="https://www.waze.com/"
+       target="_blank"
+       class="btn">
+       Waze
+    </a>
 
   </div>
 
 </section>
 
 
-<!-- =========================
-     RSVP
-========================= -->
+<!-- CONFIRMACIÓN -->
 
 <section class="rsvp">
 
@@ -648,19 +595,16 @@ footer p{
     para poder preparar todo con mucho cariño.
   </p>
 
-  <a
-    href="https://forms.google.com/"
-    target="_blank"
-    class="btn">
-    Confirmar asistencia
+  <a href="https://forms.google.com/"
+     target="_blank"
+     class="btn">
+     Confirmar asistencia
   </a>
 
 </section>
 
 
-<!-- =========================
-     REGALO
-========================= -->
+<!-- REGALO -->
 
 <section class="gift">
 
@@ -685,9 +629,8 @@ footer p{
       SOFIA.15.AÑOS
     </div>
 
-    <button
-      class="copy-btn"
-      onclick="copyText('alias')">
+    <button class="copy-btn"
+            onclick="copyText('alias')">
       Copiar alias
     </button>
 
@@ -703,13 +646,284 @@ footer p{
       0000000000000000000000
     </div>
 
-    <button
-      class="copy-btn"
-      onclick="copyText('cbu')">
+    <button class="copy-btn"
+            onclick="copyText('cbu')">
       Copiar CBU
     </button>
 
   </div>
 
 </section>
+
+
+<!-- GALERÍA -->
+
+<section class="gallery">
+
+  <div class="section-label">
+    Algunos recuerdos
+  </div>
+
+  <h2 class="section-title">
+    Galería
+  </h2>
+
+  <div class="gallery-grid">
+
+    <img
+      src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80"
+      alt="Celebración">
+
+    <img
+      src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=700&q=80"
+      alt="Celebración">
+
+    <img
+      src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80"
+      alt="Celebración">
+
+    <img
+      src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80"
+      alt="Celebración">
+
+  </div>
+
+</section>
+
+
+<!-- INFORMACIÓN -->
+
+<section class="info">
+
+  <div class="section-label">
+    Para tener en cuenta
+  </div>
+
+  <h2 class="section-title">
+    Información
+  </h2>
+
+  <div class="info-box">
+
+    <div class="info-item">
+      <strong>Horario</strong>
+      21:00 hs
+    </div>
+
+    <div class="info-item">
+      <strong>Dress Code</strong>
+      Elegante
+    </div>
+
+    <div class="info-item">
+      <strong>Una noche para recordar</strong>
+      Gracias por ser parte de este momento.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHATSAPP -->
+
+<section class="whatsapp">
+
+  <div class="section-label">
+    ¿Tenés alguna consulta?
+  </div>
+
+  <h2 class="section-title">
+    Escribime
+  </h2>
+
+  <a href="https://wa.me/5491100000000"
+     target="_blank"
+     class="btn">
+     WhatsApp
+  </a>
+
+</section>
+
+
+<!-- FINAL IVORY -->
+
+<footer>
+
+  <div class="footer-brand">
+    Ivory Diseños Digitales
+  </div>
+
+  <a
+    href="https://www.instagram.com/ivory.dd/"
+    target="_blank"
+    class="footer-instagram">
+    @ivory.dd
+  </a>
+
+  <div class="footer-phrase">
+    “Diseñamos el comienzo de momentos inolvidables.”
+  </div>
+
+</footer>
+
+
+<!-- MÚSICA -->
+
+<button
+  class="music-btn"
+  id="musicButton"
+  onclick="toggleMusic()"
+  aria-label="Activar música">
+  ♫
+</button>
+
+<audio id="music" loop>
+  <source src="musica.mp3.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+
+/* CUENTA REGRESIVA */
+
+const eventDate =
+new Date("December 12, 2026 21:00:00").getTime();
+
+
+function updateCountdown(){
+
+  const now =
+  new Date().getTime();
+
+  const distance =
+  eventDate - now;
+
+
+  if(distance <= 0){
+
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+
+    return;
+
+  }
+
+
+  const days =
+  Math.floor(
+    distance /
+    (1000 * 60 * 60 * 24)
+  );
+
+
+  const hours =
+  Math.floor(
+    (distance %
+    (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+
+  const minutes =
+  Math.floor(
+    (distance %
+    (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+
+  const seconds =
+  Math.floor(
+    (distance %
+    (1000 * 60)) /
+    1000
+  );
+
+
+  document.getElementById("days").innerHTML =
+  String(days).padStart(2,"0");
+
+
+  document.getElementById("hours").innerHTML =
+  String(hours).padStart(2,"0");
+
+
+  document.getElementById("minutes").innerHTML =
+  String(minutes).padStart(2,"0");
+
+
+  document.getElementById("seconds").innerHTML =
+  String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* COPIAR ALIAS / CBU */
+
+function copyText(id){
+
+  const element =
+  document.getElementById(id);
+
+  const text =
+  element.innerText;
+
+  navigator.clipboard.writeText(text)
+  .then(function(){
+
+    alert("Copiado correctamente 🤍");
+
+  });
+
+}
+
+
+/* MÚSICA */
+
+const music =
+document.getElementById("music");
+
+const musicButton =
+document.getElementById("musicButton");
+
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play()
+    .then(function(){
+
+      musicButton.innerHTML = "❚❚";
+
+    })
+    .catch(function(){
+
+      alert("No se pudo reproducir la música. Revisá que el archivo musica.mp3.mp3 esté en el mismo lugar que index.html.");
+
+    });
+
+  }else{
+
+    music.pause();
+
+    musicButton.innerHTML = "♫";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
 
