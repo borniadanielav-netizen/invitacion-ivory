@@ -271,31 +271,39 @@ p{
 }
 
 /* =========================
-   GALERÍA
-========================= */
+       GALERÍA
+       ========================= */
 
-.gallery{
-    background:#f5f0e8;
-}
+    .gallery {
+      display: grid;
 
-.photos{
-    width:100%;
-    max-width:500px;
-    margin:0 auto;
+      grid-template-columns: repeat(2, 1fr);
 
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:10px;
-}
+      gap: 10px;
 
-.photos img{
-    width:100%;
-    aspect-ratio:1 / 1;
-    height:auto;
+      max-width: 650px;
 
-    object-fit:cover;
-    display:block;
-}
+      margin: 35px auto 0;
+    }
+
+    .gallery img {
+      width: 100%;
+
+      height: 280px;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: saturate(.80);
+
+      transition: transform .4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
 
 /* =========================
    WHATSAPP
